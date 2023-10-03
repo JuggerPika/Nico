@@ -37,11 +37,16 @@ hr {
 }
 /* Header */
 
+header {
+    height: 17vh;
+}
+
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 
 .addres {
@@ -107,7 +112,27 @@ hr {
 /* Nav */
 
 nav {
-    margin-top: 4vh;
+    width: 100%;
+}
+
+.nav {
+    box-sizing: border-box;
+    background-color: var(--white);
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: transform 1s linear;
+}
+
+.nav.hide {
+    position: fixed;
+    box-shadow: 0px 0.01px 3px var(--gray);
+}
+
+.none-block {
+    width: 100%;
+    height: 45px;
 }
 
 .nav-menu {
@@ -117,6 +142,7 @@ nav {
 
     margin: 2vh 0vh;
 }
+
 
 .navigation {
     display: flex;
@@ -137,33 +163,31 @@ nav {
     position: absolute;
     left: 0%;
     right: 0; 
-    top: -3.5vh;
+    top: -3.8vh;
     height: 1vh;
     background-color: var(--purple-acent);
 }
 
 .none-active {
-    /* Ваші початкові стилі для .none-active тут */
     font-weight: 500;
     font-family: 'League Spartan', sans-serif;
     letter-spacing: 0.1em;
     cursor: pointer;
-    position: relative; /* Додамо позиціонування для створення лінії під текстом */
-    text-decoration: none; /* Вимкнемо декорацію тексту */
-    padding-top: 2.5vh;
-    border-top: 1vh solid transparent; /* Додаємо приховану лінію */
+    position: relative;
+    text-decoration: none;
+    padding-top: 2.8vh;
+    border-top: 1vh solid transparent;
     transition: all .25s ease-in-out;
   }
   
-  /* Анімація при наведенні миші */
-  .none-active:hover {
-    border-top-color: var(--purple-acent); /* Змінюємо колір лінії при наведенні */
-  }
+.none-active:hover {
+   border-top-color: var(--purple-acent); /* Змінюємо колір лінії при наведенні */
+}
   
 
 .svg-navigation {
     display: flex;
-    gap: 20px;
+    gap: 4vh;
 }
 
 .svg-navigation a {
@@ -175,7 +199,7 @@ nav {
     filter: invert(30%);
 }
 
-/* .window { кнопка пошук
+/* .window { 
     z-index: 1000;
     overflow: hidden;
     position: fixed;
@@ -189,17 +213,13 @@ nav {
 .window-center {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 #close-window {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    display: block;
     width: 4vh;
+    margin-top: 14vh;
+    margin-left: 20vh;
 }
 
 .search-form {
@@ -233,11 +253,12 @@ nav {
 }
 
 .content-selection {
-    padding-top: 12vh;
+    margin-top: 2vh;
     font-family: 'Lexend', sans-serif;
 }
 
 .content-selection h1 {
+    padding-top: 12vh;
     font-size: 84px;
 }
 
@@ -295,7 +316,9 @@ nav {
     justify-content: center;
     margin-top: 10vh;
 
+    font-family: 'Lexend', sans-serif;
     font-size: 54px;
+    font-weight: 600;
 }
 
 .cards {
@@ -311,6 +334,8 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 50px;
+
+    font-family: 'Lexend', sans-serif;
 }
 
 .card-img {
@@ -406,4 +431,21 @@ nav {
 .content-seletion-2 a:hover {
     background-color: var(--light-gray);
     border-color: var(--light-gray);
+}
+
+/* Slection 4 */
+
+.background-color-bg-3 {
+    background-color: var(--white-gray);
+    height: 40vh;
+}
+
+.title-2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+
+    font-size: 54px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
 }
